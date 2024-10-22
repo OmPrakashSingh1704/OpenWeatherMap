@@ -44,7 +44,17 @@ Before running the application, you need to configure the following environment 
    cd OpenWeatherMap
    ```
 
-2. **Run the Setup Script:**
+2. **Create and activate venv:**
+   ```bash
+   python3 -m venv venv
+   venv\Scripts\activate
+   ```
+3. ""Install requirements:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Setup Script:**
 
    Execute the provided `bash.sh` script to create a virtual environment, install the required packages, and run the application:
 
