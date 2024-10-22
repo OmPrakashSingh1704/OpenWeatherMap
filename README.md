@@ -56,7 +56,7 @@ Before running the application, you need to configure the following environment 
 
 4. **Run the Setup Script:**
 
-   Execute the provided `bash.sh` script to create a virtual environment, install the required packages, and run the application:
+   Execute the provided `bash.sh` script to run the application:
 
    ```bash
    .\bash.sh
