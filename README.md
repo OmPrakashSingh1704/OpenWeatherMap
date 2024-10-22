@@ -49,7 +49,7 @@ Before running the application, you need to configure the following environment 
    python3 -m venv venv
    venv\Scripts\activate
    ```
-3. ""Install requirements:**
+3. **Install requirements:**
    ```bash
    pip install -r requirements.txt
    ```
