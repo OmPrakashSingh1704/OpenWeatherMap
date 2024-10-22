@@ -1,9 +1,9 @@
 import datetime
 import pyowm
 import os
-from LLMsummary import send_warning, send_summary
-from report_db import addSummary
-from weather_db import addWeather, shouldUpdateWeather, dropDataBefore24Hours, Warning, Summary
+from .LLMsummary import send_warning, send_summary
+from .report_db import addSummary
+from .weather_db import addWeather, shouldUpdateWeather, dropDataBefore24Hours, Warning, Summary
 
 
 # Function to call the OpenWeatherMap API for the specified city
