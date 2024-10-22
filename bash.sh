@@ -16,7 +16,7 @@ if [ ! -d venv ]; then
 fi
 
 # Activate the virtual environment
-source venv/bin/activate
+venv\Scripts\activate
 
 # Install required packages
 echo "Installing packages from requirements.txt..."
