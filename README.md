@@ -1,47 +1,65 @@
-# Weather Summary App
+# Weather Reporting Application
 
-## Overview
-
-The Weather Summary App provides daily weather data summaries for multiple cities. It fetches real-time weather information, calculates temperature statistics, and stores summaries in a SQLite database. This application is built using Python and Streamlit for a user-friendly interface.
+This application provides weather reports for various cities using the OpenWeather API. It calculates daily summaries and sends email notifications with the weather information(LLM Backed).
 
 ## Features
 
-- Fetches weather data for multiple cities (Delhi, Mumbai, Chennai, Bangalore, Kolkata, Hyderabad).
-- Calculates daily maximum, minimum, and average temperatures.
-- Determines the dominant weather condition for each day.
-- Stores and retrieves summaries in a SQLite database.
-- Interactive visualization of weather data using Plotly.
+- [x] Fetches weather data for multiple cities.
+- [x] Calculates daily maximum, minimum, and average temperatures.
+- [x] Determines the dominant weather condition for each day.
+- [x] Sends email notifications with weather summaries.
+- [x] Provides mail-based updates and warnings based on severe weather conditions.
+- [x] Generates detailed reports using a language model (LLM) for enhanced understanding of the weather data.
+- [x] Visualizes weather trends and statistics for better insights.
+- [ ] Weather forecasts (requires subscription of OpenWeatherMap API)
 
-## Installation and Running the App
+## Requirements
 
-To simplify the setup process, a bash script is provided. This script will create a virtual environment, install the required dependencies, and run the application.
+To run the application, you'll need to have Python installed along with the necessary packages listed in `requirements.txt`.
 
-### Steps
+## Environment Variables
 
-1. Clone the repository:
+Before running the application, you need to configure the following environment variables:
 
-   ```bash
-   git clone https://github.com/yourusername/weather-summary-app.git
-   cd weather-summary-app
+1. Create a `.env` file in the root directory of the project and add the following lines, replacing the placeholders with your actual credentials:
+
+   ```plaintext
+   OPENWEATHER_API_KEY=<your-openweather-api-key>
+   SENDER_MAIL=<your-email-address>
+   SENDER_PASSWORD=<your-email-password>
    ```
 
-2. Run the bash script:
+   - **`OPENWEATHER_API_KEY`**: Your API key from [OpenWeather](https://home.openweathermap.org/api_keys).
+   - **`SENDER_MAIL`**: The email address you want to use to send weather reports.
+   - **`SENDER_PASSWORD`**: The [password](https://myaccount.google.com/apppasswords) for the sender email account.
+
+     **Note: Your original password will not work due to new Google policies make sure you generate one from [here](https://myaccount.google.com/apppasswords).**
+
+## Setup Instructions
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/OmPrakashSingh1704/OpenWeatherMap/
+   cd OpenWeatherMap
+   ```
+
+2. **Run the Setup Script:**
+
+   Execute the provided `bash.sh` script to create a virtual environment, install the required packages, and run the application:
 
    ```bash
    .\bash.sh
    ```
 
-   This script will:
-   - Create a virtual environment.
-   - Install the necessary packages from `requirements.txt`.
-   - Start the Streamlit app.
+3. **Run the Application:**
 
-3. Once the setup is complete, open your browser and navigate to `http://localhost:8501` to access the Weather Summary App.
+   After setting up the environment variables, the application will run automatically when you execute the bash script.
 
-## Contributing
+## Usage
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+- The application will fetch the weather data, process it, and send email notifications at 10:00 pm or wheneven temerature raises above 35°C. It will also provide updates and warnings via email for severe weather conditions, generate comprehensive reports using LLMs, and visualize weather trends.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
