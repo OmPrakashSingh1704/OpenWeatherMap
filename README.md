@@ -59,7 +59,3 @@ Before running the application, you need to configure the following environment 
 ## Usage
 
 - The application will fetch the weather data, process it, and send email notifications at 10:00 pm or wheneven temerature raises above 35°C. It will also provide updates and warnings via email for severe weather conditions, generate comprehensive reports using LLMs, and visualize weather trends.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
